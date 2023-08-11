@@ -1,0 +1,19 @@
+version: '3' 
+services: 
+  first_api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/test_api/app
+    ports:
+      - "5050:5050"
+  second_api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/test_api/app
+    ports:
+      - "5000:5000"
+    
